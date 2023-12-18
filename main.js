@@ -49,14 +49,14 @@ function atualizaTabela() {
 
 function atualizaMediaFinal() {
     const mediaFinal = calculaMediaFinal();
-    document.getElementById('media-final-valor').innerHTML = mediaFinal;
+    document.getElementById('media-final-valor').innerHTML = mediaFinal.toFixed(2);
     document.getElementById('media-final-resultado').innerHTML = mediaFinal >= 7 ? spanAprovado : spanReprovado;
 }
 
 function calculaMediaFinal () {
     let somaDasNotas = 0;
 
-    for (let i = 0; i <notas.length; i++ ) {
+    for (let i = 0; i < notas.length; i++ ) {
         somaDasNotas += notas[i];
     }
     
